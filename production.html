@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jaren Test Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+</head>
+<body class="container" style="background-color: #2E2E2E;">
+<div class="navbar">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="/">Awesome Site</a>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Staging Page</a></li>
+        </ul>
+    </div>
+</div>
+
+<ol class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li class="active">Production</li>
+</ol>
+
+<div class="jumbotron" style="text-align: center;">
+    <h4 style="color: #337ab7;"><i class="fa fa-quote-left" style="color: #080808"></i>First come smiles, then comes lies. Last is gunfire.<i class="fa fa-quote-right" style="color: #080808"></i></h4>
+    <!-- long https://www.youtube.com/watch?v=uqhwQBHIuPg-->
+    <!-- short https://www.youtube.com/watch?v=KCo79TnXYjE -->
+    <a href="https://www.youtube.com/watch?v=uqhwQBHIuPg" target="_blank"><i class="fa fa-play fa-3x"></i></a><br/><br/>
+    <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/uqhwQBHIuPg" frameborder="0" allowfullscreen></iframe><br/><br/>-->
+    <h2>Adjust the width of this page and look for tag relocation</h2>
+</div>
+
+<div class="content">
+    <!-- Ad notice tag tests -->
+    <div class="row">
+        <div class="col-sm-6" id="bottomright">
+            <div class="well">
+                <b>Production</b> - Div with bottom-right position tag <br />
+            </div>
+        </div>
+        <div class="col-sm-6"  id="bottomleft">
+            <div class="well">
+                <b>Production</b> - Div with bottom-left position tag <br />
+            </div>
+        </div>
+        <div class="col-sm-6"  id="topright">
+            <div class="well">
+                <b>Production</b> - Div with top-right position tag <br />
+            </div>
+        </div>
+        <div class="col-sm-6"  id="topleft">
+            <div class="well">
+                <b>Production</b> - Div with top-left position tag <br />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+            <div class="col-sm-6">
+                <div class="well">
+                    <h4><i class="fa fa-car fa-2x"></i> Test Drive a Tag - Choose an environment</h4>
+                    <div id ="chooseEnvironment" class="list-group">
+                        <div id="stagingEnvironment" class="list-group-item">Staging Tag</div>
+                        <div id="productionEnvironment" class="list-group-item">Production Tag</div>
+                    </div>
+                    <h4>Notice CID and NID</h4>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">CID</span>
+                        <input type="text" class="form-control" placeholder="Company ID #" aria-describedby="basic-addon1" id="cidEntry">
+                        <span class="input-group-addon" id="basic-addon1">NID</span>
+                        <input type="text" class="form-control" placeholder="Notice ID #" aria-describedby="basic-addon1" id="nidEntry">
+                    </div>
+                    <br /><center><i id ="previewTv" class="fa fa-tv fa-5x fa-primary"></i><br /><br />
+                    <div id="generatePreviewBtn" class="btn-group">
+                        <div id="getPreview" class="btn btn-default" type="button" aria-haspopup="false" aria-expanded="false">
+                            Get tag preview
+                        </div>
+                    </div>
+                </center>
+                </div>
+            </div>
+            <div class="col-sm-6" id="previewDiv" style="display: none;">
+                <div class="well"  id="previewDivWell" style="text-align: center;">
+                    <h4>Preview shows like this for now</h4>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+<!--
+=======================================================================================
+Scripts
+=======================================================================================
+-->
+
+<!-- Production tags -->
+<!-- Bottom Right -->
+<script type="text/javascript">
+    window.setTimeout(function() {
+        var el = document.getElementById('bottomright');
+        var id = 'bottomright';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = "//c.betrad.com/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=38189;container=" + id;
+        el.appendChild(s);
+    }, 250);
+</script>
+
+<!-- Bottom Left -->
+<script type="text/javascript">
+    window.setTimeout(function() {
+        var el = document.getElementById('bottomleft');
+        var id = 'bottomleft';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = "//c.betrad.com/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=40568;container=" + id;
+        el.appendChild(s);
+    }, 250);
+</script>
+
+<!-- Top Right -->
+<script type="text/javascript">
+    window.setTimeout(function() {
+        var el = document.getElementById('topright');
+        var id = 'topright';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = "//c.betrad.com/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=38634;container=" + id;
+        el.appendChild(s);
+    }, 250);
+</script>
+
+<!-- Top Left -->
+<script type="text/javascript">
+    window.setTimeout(function() {
+        var el = document.getElementById('topleft');
+        var id = 'topleft';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = "//c.betrad.com/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=38223;container=" + id;
+        el.appendChild(s);
+    }, 250);
+</script>
+
+<!-- Event listener for Test Drive a tag - environment picker -->
+<script type="text/javascript">
+    document.getElementById('stagingEnvironment').addEventListener("click", function(){
+    <!--Set the color showing its set-->
+        document.getElementById('stagingEnvironment').style.backgroundColor = "#337AB7";
+        document.getElementById('productionEnvironment').style.backgroundColor = "#fff";
+    });
+    document.getElementById('productionEnvironment').addEventListener("click", function(){
+    <!--Set the color showing its set-->
+        document.getElementById('productionEnvironment').style.backgroundColor = "#337AB7";
+        document.getElementById('stagingEnvironment').style.backgroundColor = "#fff";
+    });
+</script>
+
+
+<!-- Event listener for Test Drive a tag - NID and CID entries & Environment -->
+<script type="text/javascript">
+    document.getElementById('getPreview').addEventListener("click", function() {
+        <!-- Value Checking / Printing -->
+        /*console.log('staging color ' + stagingEnvironment.style.backgroundColor);
+        console.log('production color ' + productionEnvironment.style.backgroundColor);
+
+        var cidEntry = document.getElementById('cidEntry').value;
+        var nidEntry = document.getElementById('nidEntry').value;
+        console.log('Your CID is ' + cidEntry);
+        console.log('Your NID is ' + nidEntry);
+        console.log(document.getElementById('stagingEnvironment').style.backgroundColor);
+        console.log(document.getElementById('productionEnvironment').style.backgroundColor);*/
+
+        <!-- Grab CID & NID - If statement for environment check -->
+        var cidEntry = document.getElementById('cidEntry').value;
+        var nidEntry = document.getElementById('nidEntry').value;
+
+        if (document.getElementById('productionEnvironment').style.backgroundColor == "rgb(51, 122, 183)") {
+            console.log('tag: //c.betrad.com/durly.js?;ad_w=160;ad_h=600;coid=' + cidEntry + ';nid=' + nidEntry + ';conatiner=tag1;');
+        }
+        else if (document.getElementById('stagingEnvironment').style.backgroundColor == "rgb(51, 122, 183)") {
+            console.log('tag: //staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=160;ad_h=600;coid=' + cidEntry + ';nid=' + nidEntry + ';container=tag1;');
+        }
+        else {
+            alert('Please choose an environment');
+        }
+
+        <!-- display the preview div -->
+        document.getElementById('previewDiv').style.display = 'inherit';
+
+        <!--Hide the TV icon -->
+        //document.getElementById('previewTv').style.display = "none";
+
+        <!-- Create the iFrame -->
+        /*function makeFrame() {
+            ifrm = document.createElement("IFRAME");
+            ifrm.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/2/24/Ad-MediumRectangle-300x250.jpg");
+            ifrm.setAttribute("scrolling", "no");
+            ifrm.style.width = 300+"px";
+            ifrm.style.height = 250+"px";
+            document.body.previewDiv.appendChild(ifrm);
+        }*/
+
+        var e = document.getElementById('previewDivWell');
+        previewDivWell.innerHTML = e.innerHTML + "Jaren was here";
+
+        //console.log(IFRAME);
+        //makeFrame();
+        //previewDiv.contentDocument.write('jaren was here');
+    });
+</script>
+</body>
+</html>

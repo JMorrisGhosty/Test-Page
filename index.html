@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jaren Test Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+</head>
+<body class="container" style="background-color: #2E2E2E;">
+    <div class="navbar">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">The Tower</a>
+            <ul class="nav navbar-nav">
+                <li><a href="production.html">Production Page</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li class="active">Staging</li>
+    </ol>
+
+    <div class="jumbotron" style="text-align: center;">
+        <h4 style="color: #337ab7; text-align: justify;"><i class="fa fa-quote-left"></i>You must never draw until you know how many are against you, or you've satisfied yourself that you can never know, or you've decided it's your day to die <i class="fa fa-quote-right"></i></h4>
+        <!-- long https://www.youtube.com/watch?v=uqhwQBHIuPg-->
+        <!-- short https://www.youtube.com/watch?v=KCo79TnXYjE -->
+        <a href="https://www.youtube.com/watch?v=uqhwQBHIuPg" target="_blank"><i class="fa fa-play fa-3x"></i></a><br/><br/>
+        <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/uqhwQBHIuPg" frameborder="0" allowfullscreen></iframe><br/><br/>-->
+        <h2>Adjust the width of this page and look for tag relocation</h2>
+    </div>
+
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12" id="bottomright">
+                <div class="well">
+                    Div with bottom-right position tag <br />
+                </div>
+            </div>
+            <div class="col-sm-12"  id="bottomleft">
+                <div class="well">
+                    Div with bottom-left position tag <br />
+                </div>
+            </div>
+            <div class="col-sm-12"  id="topright">
+                <div class="well">
+                    Div with top-right position tag <br />
+                </div>
+            </div>
+            <div class="col-sm-12"  id="topleft">
+                <div class="well">
+                    Div with top-left position tag <br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bottom-right tag -->
+    <script type="text/javascript">
+        window.setTimeout(function() {
+            var el = document.getElementById('bottomright');
+            var id = 'bottomright';
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = "//staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=32275;container=" + id;
+            el.appendChild(s);
+        }, 250);
+    </script>
+
+    <!-- bottom-left tag -->
+    <script type="text/javascript">
+        window.setTimeout(function() {
+            var el = document.getElementById('bottomleft');
+            var id = 'bottomleft';
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = "//staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=32277;container=" + id;
+            el.appendChild(s);
+        }, 250);
+    </script>
+
+    <!-- top-right tag -->
+    <script type="text/javascript">
+        window.setTimeout(function() {
+            var el = document.getElementById('topright');
+            var id = 'topright';
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = "//staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=32276;container=" + id;
+            el.appendChild(s);
+        }, 250);
+    </script>
+
+    <!-- top-left tag -->
+    <script type="text/javascript">
+        window.setTimeout(function() {
+            var el = document.getElementById('topleft');
+            var id = 'topleft';
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = "//staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=1752;container=" + id;
+            el.appendChild(s);
+        }, 250);
+    </script>
+
+    <!--<script type="text/javascript" src="https://staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=300;ad_h=250;coid=242;nid=32275;container=testdiv;"></script>-->
+</body>
+</html>
+
+<!--
+Ghostery Enterprise tag
+Campaign: JMtest
+Client ID: 242
+Notice ID: 39942
+Ad Size: 300x250
+-->
