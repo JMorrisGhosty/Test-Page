@@ -1,47 +1,47 @@
-/* Load tags for hte production page */
-    <!-- Bottom Right -->
+/**
+ * Created by Jaren on 10/12/2015.
+ */
+/* Load staging tags for resize test */
+    <!-- bottom-right tag -->
     window.setTimeout(function() {
         var el = document.getElementById('bottomright');
         var id = 'bottomright';
         var s = document.createElement('script');
         s.type = 'text/javascript';
-        s.src = "//c.betrad.com/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=38189;container=" + id;
+        s.src = "//staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=32275;container=" + id;
         el.appendChild(s);
     }, 250);
 
-
-    <!-- Bottom Left -->
+    <!-- bottom-left tag -->
     window.setTimeout(function() {
         var el = document.getElementById('bottomleft');
         var id = 'bottomleft';
         var s = document.createElement('script');
         s.type = 'text/javascript';
-        s.src = "//c.betrad.com/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=40568;container=" + id;
+        s.src = "//staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=32277;container=" + id;
         el.appendChild(s);
     }, 250);
 
 
-    <!-- Top Right -->
+    <!-- top-right tag -->
     window.setTimeout(function() {
         var el = document.getElementById('topright');
         var id = 'topright';
         var s = document.createElement('script');
         s.type = 'text/javascript';
-        s.src = "//c.betrad.com/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=38634;container=" + id;
+        s.src = "//staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=32276;container=" + id;
         el.appendChild(s);
     }, 250);
 
-
-    <!-- Top Left -->
+    <!-- top-left tag -->
     window.setTimeout(function() {
         var el = document.getElementById('topleft');
         var id = 'topleft';
         var s = document.createElement('script');
         s.type = 'text/javascript';
-        s.src = "//c.betrad.com/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=38223;container=" + id;
+        s.src = "//staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=" + el.offsetWidth + ";ad_h=" + el.offsetHeight + ";coid=242;nid=1752;container=" + id;
         el.appendChild(s);
     }, 250);
-
 
 /* Event listener for Test Drive a tag - sets the BG color on selected */
 

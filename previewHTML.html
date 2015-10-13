@@ -5,20 +5,23 @@
 </head>
 <body id="body">
     <div id="iframeHolder">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Ad-MediumRectangle-300x250.jpg">
+    <!--<img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Ad-MediumRectangle-300x250.jpg">-->
     <script type="text/javascript">
         /* Grab all the session cookies, cid, nid, environment URL, preview size */
         var previewUrl = sessionStorage.getItem('previewUrl');
         var nidEntry = sessionStorage.getItem('nidEntry');
         var cidEntry = sessionStorage.getItem('cidEntry');
+        var previewSize_w = sessionStorage.getItem('previewSize_w');
+        var previewSize_h = sessionStorage.getItem('previewSize_h');
 
+        /* Build the preview iFame */
+        var elem = document.createElement("img");
+        elem.setAttribute("src", "http://elm.parsilog.com/wp-content/uploads/2015/01/Real-Space-Wallpapers-Hd-Cool-7-HD-Wallpapers.jpg");
+        elem.setAttribute("width",previewSize_w);
+        elem.setAttribute("height", previewSize_h);
+        document.getElementById('iframeHolder').appendChild(elem);
 
-        /*Add the creative to iframeHolder div
-        var creative = document.createElement("img")
-        elem.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/2/24/Ad-MediumRectangle-300x250.jpg");
-        elem.setAttribute("height", previewHeight)
-*/
-        /*create the notice on creative preview */
+        /* execute the ad notice tag */
         var s = document.createElement('script');
         s.type = 'text/javascript';
         s.src = previewUrl;
