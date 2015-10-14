@@ -7,87 +7,45 @@
 </head>
 <body class="container" style="background-color: #dddddd;">
 <div class="navbar">
+    <br />
     <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">Home</a>
-        <ul class="nav navbar-nav">
-            <li><a href="staging.html">Staging Page</a></li>
+        <ul class="nav nav-pills">
+            <li><a href="index.html">Test a tag</a></li>
+            <li><a href="staging.html">Staging Scaling</a></li>
+            <li class="active"><a href="production.html">Production Scaling</a></li>
         </ul>
     </div>
 </div>
 
-<ol class="breadcrumb">
-    <li><a href="index.html">Home</a></li>
-    <li class="active">Production</li>
-</ol>
 
-<div class="jumbotron" style="text-align: center;">
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="well">
-                <h4><i class="fa fa-car fa-2x"></i> Test Drive a Tag - Choose an environment</h4>
-                <div id ="chooseEnvironment" class="list-group">
-                    <div id="stagingEnvironment" class="list-group-item">Staging Tag</div>
-                    <div id="productionEnvironment" class="list-group-item">Production Tag</div>
-                </div>
-                <h4>Notice CID and NID</h4>
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">CID</span>
-                    <input type="text" class="form-control" placeholder="Company ID #" aria-describedby="basic-addon1" id="cidEntry">
-                    <span class="input-group-addon" id="basic-addon1">NID</span>
-                    <input type="text" class="form-control" placeholder="Notice ID #" aria-describedby="basic-addon1" id="nidEntry">
-                </div>
-                <br />
-                <div class="button-group" role="group" id="previewSize">
-                    <button type="button" class="btn btn-default" id="bannerPreview">Banner - 320x50</button>
-                    <button type="button" class="btn btn-default" id="mediumPreview">Medium - 300x250</button>
-                    <button type="button" class="btn btn-default" id="skyscraperPreview">Skyscraper - 160x600</button>
-                </div>
-                <!--<ul class="dropdown dropdown-menu">
-                    <li><a href="#">Banner - 320x50</a></li>
-                    <li><a href="#">Medium  - 300x250</a></li>
-                    <li><a href="#">Skyscraper - 120x600</a></li>
-                    <li><a href="#">Wide Skyscraper - 160x600</a></li>
-                </ul>-->
-                <br />
-            </div>
-        </div>
-        <!-- Create hidden DOM element for iFrame / tag preview -->
-        <div class="col-sm-6" id="previewDiv" style="display: none; overflow: auto;">
-            <div class="well"  id="previewDivWell" style="text-align: center;">
-            </div>
-        </div>
-
-        <div class="col-sm-12">
-            <center><i id ="previewTv" class="fa fa-tv fa-5x fa-primary"></i><br /><br />
-                <div id="generatePreviewBtn" class="btn-group">
-                    <div id="getPreview" class="btn btn-default" type="button">
-                        Get tag preview
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-</div>
 
 <div class="content">
     <!-- Ad notice tag tests -->
     <div class="row">
-        <div class="col-sm-6" id="bottomright">
+        <div class="col-sm-12">
+            <div class="well" style="text-align: center;">
+                <h3><i class="fa fa-arrows-h"></i> Adjust page width scaling test <i class="fa fa-arrows-h"></i></h3>
+                <h4>Production Tags</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12" id="bottomright">
             <div class="well">
                 <b>Production</b> - Div with bottom-right position tag <br />
             </div>
         </div>
-        <div class="col-sm-6"  id="bottomleft">
+        <div class="col-sm-12"  id="bottomleft">
             <div class="well">
                 <b>Production</b> - Div with bottom-left position tag <br />
             </div>
         </div>
-        <div class="col-sm-6"  id="topright">
+        <div class="col-sm-12"  id="topright">
             <div class="well">
                 <b>Production</b> - Div with top-right position tag <br />
             </div>
         </div>
-        <div class="col-sm-6"  id="topleft">
+        <div class="col-sm-12"  id="topleft">
             <div class="well">
                 <b>Production</b> - Div with top-left position tag <br />
             </div>
@@ -95,6 +53,6 @@
     </div>
 </div>
 
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/production.js"></script>
 </body>
 </html>
