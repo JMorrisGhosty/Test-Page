@@ -1,8 +1,16 @@
 /**
  * Created by Jaren on 10/13/2015.
  */
-/* Event listener for Test Drive a tag - sets the BG color on selected */
+/* Declare vars for hoisting */
+var iconPosition;
+var iconDisplayStyle;
+var overlayDisplay;
+var iconDelay;
+var previewWidth;
+var previewHeight;
 
+/* Event listener for Test Drive a tag - sets the BG color on selected */
+    /* Icon Position  */
 document.getElementById('stagingEnvironment').addEventListener("click", function(){
     <!--Set the color showing its set-->
     document.getElementById('stagingEnvironment').style.backgroundColor = "#337AB7";
@@ -13,6 +21,95 @@ document.getElementById('productionEnvironment').addEventListener("click", funct
     document.getElementById('productionEnvironment').style.backgroundColor = "#337AB7";
     document.getElementById('stagingEnvironment').style.backgroundColor = "#fff";
 });
+
+/* Event listeners for Test Drive Tag Settings */
+document.getElementById('iconP-btm-left').addEventListener("click", function(){
+    document.getElementById('iconP-btm-left').style.backgroundColor = "#337AB7";
+    document.getElementById('iconP-btm-right').style.backgroundColor = "#fff";
+    document.getElementById('iconP-top-left').style.backgroundColor = "#fff";
+    document.getElementById('iconP-top-right').style.backgroundColor = "#fff";
+    iconPosition = 'bottom_left';
+    console.log(iconPosition);
+});
+
+document.getElementById('iconP-btm-right').addEventListener("click", function(){
+    document.getElementById('iconP-btm-left').style.backgroundColor = "#fff";
+    document.getElementById('iconP-btm-right').style.backgroundColor = "#337AB7";
+    document.getElementById('iconP-top-left').style.backgroundColor = "#fff";
+    document.getElementById('iconP-top-right').style.backgroundColor = "#fff";
+    iconPosition = 'bottom_right';
+    console.log(iconPosition);
+});
+
+document.getElementById('iconP-top-left').addEventListener("click", function(){
+    document.getElementById('iconP-btm-left').style.backgroundColor = "#fff";
+    document.getElementById('iconP-btm-right').style.backgroundColor = "#fff";
+    document.getElementById('iconP-top-left').style.backgroundColor = "#337AB7";
+    document.getElementById('iconP-top-right').style.backgroundColor = "#fff";
+    iconPosition = 'top_left';
+    console.log(iconPosition);
+});
+
+document.getElementById('iconP-top-right').addEventListener("click", function(){
+    document.getElementById('iconP-btm-left').style.backgroundColor = "#fff";
+    document.getElementById('iconP-btm-right').style.backgroundColor = "#fff";
+    document.getElementById('iconP-top-left').style.backgroundColor = "#fff";
+    document.getElementById('iconP-top-right').style.backgroundColor = "#337AB7";
+    iconPosition = 'top_right';
+    console.log(iconPosition);
+});
+    /* Icon Display Style */
+document.getElementById('iconDisplay-normal').addEventListener("click", function(){
+    document.getElementById('iconDisplay-normal').style.backgroundColor = "#337AB7";
+    document.getElementById('iconDisplay-expandableIcon').style.backgroundColor = "#fff";
+    document.getElementById('iconDisplay-iconOnly').style.backgroundColor = "#fff";
+    document.getElementById('iconStyleAlert').style.display = "block";
+    iconDisplayStyle = "normal icon";
+    console.log(iconDisplayStyle);
+});
+
+document.getElementById('iconDisplay-expandableIcon').addEventListener("click", function(){
+    document.getElementById('iconDisplay-normal').style.backgroundColor = "#fff";
+    document.getElementById('iconDisplay-expandableIcon').style.backgroundColor = "#337AB7";
+    document.getElementById('iconDisplay-iconOnly').style.backgroundColor = "#fff";
+    document.getElementById('iconStyleAlert').style.display = "none";
+    iconDisplayStyle = "expandable_icon";
+    console.log(iconDisplayStyle);
+});
+
+document.getElementById('iconDisplay-iconOnly').addEventListener("click", function(){
+    document.getElementById('iconDisplay-normal').style.backgroundColor = "#fff";
+    document.getElementById('iconDisplay-expandableIcon').style.backgroundColor = "#fff";
+    document.getElementById('iconDisplay-iconOnly').style.backgroundColor = "#337AB7";
+    document.getElementById('iconStyleAlert').style.display = "block";
+    iconDisplayStyle = "icon_only";
+    console.log(iconDisplayStyle);
+});
+
+document.getElementById('overlayDisplayYes').addEventListener("click", function(){
+    document.getElementById('overlayDisplayYes').style.backgroundColor = "#337AB7";
+    document.getElementById('overlayDisplayNo').style.backgroundColor = "#fff";
+    overlayDisplay = "true";
+    console.log(overlayDisplay);
+});
+
+document.getElementById('overlayDisplayNo').addEventListener("click", function(){
+    document.getElementById('overlayDisplayYes').style.backgroundColor = "#fff";
+    document.getElementById('overlayDisplayNo').style.backgroundColor = "#337AB7";
+    overlayDisplay = "false";
+    console.log(overlayDisplay);
+});
+
+document.getElementById('previewWidth').addEventListener("click", function(){
+    /* Set the color showing its set */
+    document.getElementById('previewSizeAlert').style.display = "block";
+});
+
+document.getElementById('previewHeight').addEventListener("click", function(){
+    /* Set the color showing its set */
+    document.getElementById('previewSizeAlert').style.display = "none";
+});
+
 
 /* Check the preview window size */
 document.getElementById('bannerPreview').onclick = function() {
@@ -74,3 +171,82 @@ document.getElementById('getPreview').addEventListener("click", function() {
     //makeFrame();
     //previewDiv.contentDocument.write('jaren was here');
 });
+
+/* Get settings preview button holy shit */
+document.getElementById('getSettingsPreview').addEventListener("click", function() {
+    /* First lets check if the user has entered values for Icon Delay, Vertical Offset, Horizontal Offset, Width and Height and if not set Default Values */
+
+    /* Icon Delay */
+    if (document.getElementById('iconDelay').value >= 31){
+        alert('Take it easy, keep it 30 seconds or less!');
+        document.getElementById('iconDelay').value = '';
+        iconDelay = "0";
+        console.log('icon delay: ' + iconDelay);
+    }
+    else {
+        if (document.getElementById('iconDelay').value == null || document.getElementById('iconDelay').value == '') {
+            iconDelay = "0";
+            console.log('icon delay: ' + iconDelay);
+        }
+        else if (document.getElementById('iconDelay').value != null || document.getElementById('iconDelay').value == '') {
+            iconDelay = document.getElementById('iconDelay').value;
+            console.log('icon delay: ' + iconDelay);
+        }
+    }
+
+    /* Vertical Offset */
+    if (document.getElementById('verticalOffset').value >= 31){
+        alert('Take it easy, keep it 30 pixels or less!');
+        document.getElementById('verticalOffset').value = '';
+        verticalOffset = "0";
+        console.log('vertical offset: ' + verticalOffset);
+    }
+    else {
+        if (document.getElementById('verticalOffset').value == null || document.getElementById('verticalOffset').value == '') {
+            verticalOffset = "0";
+            console.log('vertical offset: ' + verticalOffset);
+        }
+        else if (document.getElementById('verticalOffset').value != null || document.getElementById('verticalOffset').value == '') {
+            verticalOffset = document.getElementById('verticalOffset').value;
+            console.log('vertical offset: ' + verticalOffset);
+        }
+    }
+
+    /* Horizontal Offset */
+    if (document.getElementById('horizontalOffset').value >= 31){
+        alert('Take it easy, keep it 30 pixels or less!');
+        document.getElementById('horizontalOffset').value = '';
+        horizontalOffset = "0";
+        console.log('horizontal offset: ' + horizontalOffset);
+    }
+    else {
+        if (document.getElementById('horizontalOffset').value == null || document.getElementById('horizontalOffset').value == '') {
+            horizontalOffset = "0";
+            console.log('horizontal offset: ' + horizontalOffset);
+        }
+        else if (document.getElementById('horizontalOffset').value != null || document.getElementById('horizontalOffset').value == '') {
+            horizontalOffset = document.getElementById('horizontalOffset').value;
+            console.log('horizontal offset: ' + horizontalOffset);
+        }
+    }
+    /* Preview Width */
+    if (document.getElementById('previewWidth').value == null || document.getElementById('previewWidth').value == '') {
+            previewWidth = "300";
+            console.log('preview width: ' + previewWidth);
+        }
+        else if (document.getElementById('previewWidth').value != null || document.getElementById('previewWidth').value == '') {
+            previewWidth = document.getElementById('previewWidth').value;
+            console.log('preview width: ' + previewWidth);
+        }
+    /* Preview Height */
+    if (document.getElementById('previewHeight').value == null || document.getElementById('previewHeight').value == '') {
+        previewHeight = "250";
+        console.log('preview height: ' + previewHeight);
+    }
+    else if (document.getElementById('previewHeight').value != null || document.getElementById('previewHeight').value == '') {
+        previewHeight = document.getElementById('previewHeight').value;
+        console.log('preview height: ' + previewHeight);
+    }
+});
+
+

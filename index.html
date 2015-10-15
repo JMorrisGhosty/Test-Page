@@ -19,9 +19,9 @@
 
     <div class="jumbotron" style="text-align: center;">
         <div class="row">
+            <h3><i class="fa fa-car"></i> Test Drive a Tag</h3>
             <div class="col-sm-6">
                 <div class="well">
-                    <h3><i class="fa fa-car"></i> Test Drive a Tag</h3>
                     <h4 style="text-align: left;">Select an environment</h4>
                     <div id ="chooseEnvironment" class="list-group">
                         <div id="stagingEnvironment" class="list-group-item">Staging Tag</div>
@@ -55,12 +55,86 @@
                 <div class="well"  id="previewDivWell" style="text-align: center;">
                 </div>
             </div>
-
+            <!-- Get preview button -->
             <div class="col-sm-12">
                 <center><i id ="previewTv" class="fa fa-tv fa-5x fa-primary"></i><br /><br />
                     <div id="generatePreviewBtn" class="btn-group">
                         <div id="getPreview" class="btn btn-default" type="button">
                             Get tag preview
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="row">
+            <span style="text-align: center;padding-top: 2px;"><h3><i class="fa fa-tag"></i> Test Drive Tag Settings</h3></span>
+            <div class="col-sm-6">
+                <div class="well">
+                    <h4 style="text-align: left;">Select icon position</h4>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" id="iconP-btm-left">Bottom-left</button>
+                        <button type="button" class="btn btn-default" id="iconP-btm-right">Bottom-right</button>
+                        <button type="button" class="btn btn-default" id="iconP-top-left">Top-left</button>
+                        <button type="button" class="btn btn-default" id="iconP-top-right">Top-right</button>
+                    </div>
+                    <h4 style="text-align: left;">Select icon display style</h4>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" id="iconDisplay-normal">Normal**</button>
+                        <button type="button" class="btn btn-default" id="iconDisplay-expandableIcon">Expandable Icon</button>
+                        <button type="button" class="btn btn-default" id="iconDisplay-iconOnly">Icon only*</button>
+                    </div>
+                    <br />
+                    <div class="alert alert-warning" role="alert" id="iconStyleAlert" style="display: none;">*These options are only allowed to run on the these sizes: 88x31, 120x90, 120x60, 125x125, 234x60, 300x60.<br />**This is the industry default setting.
+                    </div>
+                    <h4 style="text-align: left;">Display Overlay</h4>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default" id="overlayDisplayYes">Yes</button>
+                        <button type="button" class="btn btn-default" id="overlayDisplayNo">No</button>
+                    </div>
+                    <br />
+                    <h4 style="text-align: left;">Icon Delay<small> -   Defaults to 0</small></h4>
+                    <div class="input-group">
+                        <span class="input-group-addon">Seconds</span>
+                        <input type="text" class="form-control" placeholder="..." aria-describedby="basic-addon1" id="iconDelay">
+                    </div>
+                    <br />
+                    <h4 style="text-align: left;">Vertical Offset<small> -   Defaults to 0</small></h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="..." aria-describedby="basic-addon1" id="verticalOffset">
+                        <span class="input-group-addon">pixels</span>
+                    </div>
+                    <br />
+                    <h4 style="text-align: left;">Horizontal Offset<small> -   Defaults to 0</small></h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="..." aria-describedby="basic-addon1" id="horizontalOffset">
+                        <span class="input-group-addon">pixels</span>
+                    </div>
+                    <br />
+                    <h4 style="text-align: left;">Preview Size<small> -   Defaults to 300 x 250</small></h4>
+                    <div class="input-group">
+                        <span class="input-group-addon">Width</span>
+                        <input type="text" class="form-control" placeholder="..." aria-describedby="basic-addon1" id="previewWidth">
+                        <span class="input-group-addon">Height</span>
+                        <input type="text" class="form-control" placeholder="..." aria-describedby="basic-addon1" id="previewHeight">
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="previewSizeAlert" style="display: none;">Recommended 1024 x 768 or less...but you're welcome to enter the DANGER ZONE!
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" id="previewDivSettings" style="display: none; overflow: auto;">
+                <div class="well"  id="previewDivSettingsWell" style="text-align: center;">
+                    Hope this looks as expected!!
+                </div>
+            </div>
+            <!-- Get preview button -->
+            <div class="col-sm-12">
+                <center><i id ="previewTv" class="fa fa-tv fa-5x fa-primary"></i><br /><br />
+                    <div id="generateSettingsPreviewBtn" class="btn-group">
+                        <div id="getSettingsPreview" class="btn btn-default" type="button">
+                            Get settings preview
                         </div>
                     </div>
                 </center>
