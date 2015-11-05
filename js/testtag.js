@@ -15,11 +15,19 @@ document.getElementById('stagingEnvironment').addEventListener("click", function
     <!--Set the color showing its set-->
     document.getElementById('stagingEnvironment').style.backgroundColor = "#337AB7";
     document.getElementById('productionEnvironment').style.backgroundColor = "#fff";
+    document.getElementById('devEnvironment').style.backgroundColor = "#fff";
 });
 document.getElementById('productionEnvironment').addEventListener("click", function(){
     <!--Set the color showing its set-->
     document.getElementById('productionEnvironment').style.backgroundColor = "#337AB7";
     document.getElementById('stagingEnvironment').style.backgroundColor = "#fff";
+    document.getElementById('devEnvironment').style.backgroundColor = "#fff";
+});
+document.getElementById('devEnvironment').addEventListener("click", function(){
+    <!--Set the color showing its set-->
+    document.getElementById('devEnvironment').style.backgroundColor = "#337AB7";
+    document.getElementById('stagingEnvironment').style.backgroundColor = "#fff";
+    document.getElementById('productionEnvironment').style.backgroundColor = "#fff";
 });
 
 /* Event listeners for Test Drive Tag Settings */
