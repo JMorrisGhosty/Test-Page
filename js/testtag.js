@@ -30,6 +30,35 @@ document.getElementById('devEnvironment').addEventListener("click", function(){
     document.getElementById('productionEnvironment').style.backgroundColor = "#fff";
 });
 
+
+document.getElementById('murlyTag').addEventListener("click", function(){
+    <!--Set the color showing its set-->
+    document.getElementById('murlyTag').style.backgroundColor = "#337AB7";
+    document.getElementById('surlyTag').style.backgroundColor = "#fff";
+    document.getElementById('durlyTag').style.backgroundColor = "#fff";
+    document.getElementById('murlyTagAlert').style.display = "block";
+    sessionStorage.setItem('tagType', 'murly.js');
+});
+document.getElementById('surlyTag').addEventListener("click", function(){
+    <!--Set the color showing its set-->
+    document.getElementById('surlyTag').style.backgroundColor = "#337AB7";
+    document.getElementById('murlyTag').style.backgroundColor = "#fff";
+    document.getElementById('durlyTag').style.backgroundColor = "#fff";
+    document.getElementById('murlyTagAlert').style.display = "none";
+    sessionStorage.setItem('tagType', 'surly.js');
+});
+document.getElementById('durlyTag').addEventListener("click", function(){
+    <!--Set the color showing its set-->
+    document.getElementById('durlyTag').style.backgroundColor = "#337AB7";
+    document.getElementById('surlyTag').style.backgroundColor = "#fff";
+    document.getElementById('murlyTag').style.backgroundColor = "#fff";
+    document.getElementById('murlyTagAlert').style.display = "none";
+    sessionStorage.setItem('tagType', 'durly.js');
+});
+
+
+
+
 /* Event listeners for Test Drive Tag Settings */
 document.getElementById('iconP-btm-left').addEventListener("click", function(){
     document.getElementById('iconP-btm-left').style.backgroundColor = "#337AB7";
@@ -133,21 +162,12 @@ document.getElementById('skyscraperPreview').onclick = function() {
     sessionStorage.setItem('previewSize_h', 600);
 };
 
+
 /* Event listener for Test Drive a tag - NID and CID entries & Environment */
 
 document.getElementById('getPreview').addEventListener("click", function() {
-    <!-- Value Checking / Printing -->
-    /*console.log('staging color ' + stagingEnvironment.style.backgroundColor);
-     console.log('production color ' + productionEnvironment.style.backgroundColor);
-
-     var cidEntry = document.getElementById('cidEntry').value;
-     var nidEntry = document.getElementById('nidEntry').value;
-     console.log('Your CID is ' + cidEntry);
-     console.log('Your NID is ' + nidEntry);
-     console.log(document.getElementById('stagingEnvironment').style.backgroundColor);
-     console.log(document.getElementById('productionEnvironment').style.backgroundColor);*/
-
-    <!-- Grab CID & NID -->
+    
+    <!-- Grab CID, NID, tagType -->
     var cidEntry = document.getElementById('cidEntry').value;
     var nidEntry = document.getElementById('nidEntry').value;
     sessionStorage.setItem('nidEntry', nidEntry);
@@ -155,15 +175,19 @@ document.getElementById('getPreview').addEventListener("click", function() {
 
     var previewSize_w = sessionStorage.getItem('previewSize_w');
     var previewSize_h = sessionStorage.getItem('previewSize_h');
+    var tagType = sessionStorage.getItem('tagType');
+
+
 
     <!-- check which environment is selected and write previewUrl accordingly -->
     if (document.getElementById('productionEnvironment').style.backgroundColor == "rgb(51, 122, 183)") {
-        //var previewUrl = ('//c.betrad.com/durly.js?;ad_w=160;ad_h=600;coid=' + cidEntry + ';nid=' + nidEntry + ';conatiner=tag1;');
-        sessionStorage.setItem('previewUrl', '//c.betrad.com/durly.js?;ad_w=' + previewSize_w + ';ad_h=' + previewSize_h + ';coid=' + cidEntry + ';nid=' + nidEntry + ';');
+        sessionStorage.setItem('previewUrl', '//c.betrad.com/' + tagType + '?;ad_w=' + previewSize_w + ';ad_h=' + previewSize_h + ';coid=' + cidEntry + ';nid=' + nidEntry + ';');
     }
     else if (document.getElementById('stagingEnvironment').style.backgroundColor == "rgb(51, 122, 183)") {
-        //var previewUrl = ('//staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=160;ad_h=600;coid=' + cidEntry + ';nid=' + nidEntry + ';container=tag1;');
-        sessionStorage.setItem('previewUrl', '//staging2info.ghosteryenterprise.com/ftp/staging/durly.js?;ad_w=' + previewSize_w + ';ad_h=' + previewSize_h + ';coid=' + cidEntry + ';nid=' + nidEntry + ';');
+        sessionStorage.setItem('previewUrl', '//staging2info.ghosteryenterprise.com/ftp/staging/' + tagType + '?;ad_w=' + previewSize_w + ';ad_h=' + previewSize_h + ';coid=' + cidEntry + ';nid=' + nidEntry + ';');
+    }
+    else if (document.getElementById('devEnvironment').style.backgroundColor == "rgb(51, 122, 183)") {
+        sessionStorage.setItem('previewUrl', '//dev.betrad.com/ftp/staging/' + tagType + '?;ad_w=' + previewSize_w + ';ad_h=' + previewSize_h + ';coid=' + cidEntry + ';nid=' + nidEntry + ';');
     }
     else {
         alert('Please choose an environment');
